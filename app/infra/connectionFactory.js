@@ -3,7 +3,6 @@ var mysql  = require('mysql');
 function createDBConnection() {
 
     console.log("NODE_ENV: " + process.env.NODE_ENV);
-    console.log("CLEARDB_DATABASE_URL: " + process.env.CLEARDB_DATABASE_URL);
 
     if (!process.env.NODE_ENV || process.env.node === 'dev') {
         return mysql.createConnection({
@@ -25,7 +24,10 @@ function createDBConnection() {
 
     if (process.env.NODE_ENV == 'production') {
         var url = process.env.CLEARDB_DATABASE_URL;
+        console.log("CLEARDB_DATABASE_URL: " + process.env.CLEARDB_DATABASE_URL);
         var grupos = url.match(/mysql:\/\/(.*):(.*)@(.*)\/(.*)\?/);
+        console.log("grupos: " + grupos);
+
         return mysql.createConnection({
             host:grupos[3],
             user:grupos[1],
