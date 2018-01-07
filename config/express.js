@@ -25,11 +25,7 @@ module.exports = function() {
     });
 
     app.use(function(error, req,res,next){
-        //if(process.env.NODE_ENV == 'production') {
-        //    console.log(process.env.NODE_ENV);
-            res.status(500).render('error/500');
-        //    return;
-        //}
+        res.status(500).render('error/500');
         next();
     });
 
