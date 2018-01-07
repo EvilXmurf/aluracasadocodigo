@@ -2,6 +2,9 @@ var mysql  = require('mysql');
 
 function createDBConnection() {
 
+    console.log("NODE_ENV: " + process.env.NODE_ENV);
+    console.log("CLEARDB_DATABASE_URL: " + process.env.CLEARDB_DATABASE_URL);
+
     if (!process.env.NODE_ENV || process.env.node === 'dev') {
         return mysql.createConnection({
             host: 'localhost',

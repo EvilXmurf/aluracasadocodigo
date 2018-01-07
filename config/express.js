@@ -2,7 +2,6 @@ var express = require('express');
 var load = require('express-load');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
-const env = require('get-env')();
 
 module.exports = function() {
     var app = express();
@@ -28,9 +27,6 @@ module.exports = function() {
         res.status(500).render('error/500');
         next();
     });
-
-    const nodeEnv = (process.env.NODE_ENV || '').toLowerCase();
-    console.log(nodeEnv);
    
     return app;
 }
