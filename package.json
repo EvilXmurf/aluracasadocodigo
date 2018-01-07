@@ -2,10 +2,7 @@
   "name": "casadocodigo",
   "version": "1.0.0",
   "description": "site da casa do codigo",
-  "main": "index.js",
-  "engines": {
-    "node": "8.6.4"
-  },
+  "main": "app.js",
   "scripts": {
     "test": "set NODE_ENV=test&& mocha --reporter spec",
     "start": "node app.js"
