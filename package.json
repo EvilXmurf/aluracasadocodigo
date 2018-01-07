@@ -4,7 +4,7 @@
   "description": "site da casa do codigo",
   "main": "index.js",
   "engines": {
-    "node": "9.3.0"
+    "node": "8.6.4"
   },
   "scripts": {
     "test": "set NODE_ENV=test&& mocha --reporter spec",
