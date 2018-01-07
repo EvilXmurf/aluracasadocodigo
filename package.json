@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "site da casa do codigo",
   "main": "index.js",
+  "engines":{
+    "node" : "9.3.0"
+  },  
   "scripts": {
-    "test": "set NODE_ENV=test&& mocha --reporter spec"
+    "test": "set NODE_ENV=test&& mocha --reporter spec",
+    "start" : "node app"
   },
   "author": "alberto",
   "license": "ISC",
@@ -16,10 +20,10 @@
     "express-validator": "^4.3.0",
     "get-env": "^0.5.10",
     "mysql": "^2.13.0",
+    "database-cleaner": "^1.2.0",    
     "socket.io": "^2.0.4"
   },
   "devDependencies": {
-    "database-cleaner": "^1.2.0",
     "mocha": "^4.1.0",
     "supertest": "^3.0.0"
   }
