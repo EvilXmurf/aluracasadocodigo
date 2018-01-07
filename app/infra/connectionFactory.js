@@ -29,10 +29,10 @@ function createDBConnection() {
         console.log("grupos: " + grupos);
 
         return mysql.createConnection({
-            host:grupos[3],
-            user:grupos[1],
-            password:grupos[2],
-            database:grupos[4]
+            host:'us-cdbr-iron-east-05.cleardb.net',
+            user:'b6fbb63aa71258',
+            password:'a0ead42d',
+            database:'heroku_1c62c0431c0df35'
         });
     }
 }
